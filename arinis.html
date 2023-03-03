@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        body {
+          font-family: sinica;
+          font-size: 1.2em;
+        }
+
+        .hamburger-line {
+          @apply w-[15px] h-[2.3px] my-[3px] bg-white block rounded-full;
+        }
+
+        .hamburger-active > span:nth-child(1) {
+          @apply rotate-45;
+        }
+        .hamburger-active > span:nth-child(2) {
+          @apply scale-0;
+        }
+        .hamburger-active > span:nth-child(3) {
+          @apply -rotate-45;
+        }
+
+        .after {
+          @apply '>'
+        }
+
+        .grup {
+          @apply hover: text-blue-500;
+        }
+
+        .fix {
+          @apply fixed z-10 w-full bg-white;
+        }
+      }
+    </style>
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Acme&family=Noto+Serif:wght@700&family=Open+Sans:wght@700&family=Overpass&family=Poppins:wght@900&family=Unbounded:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              hijauu: "#00C897",
+              jau: "#00FFD1",
+            },
+            fontFamily: {
+              sinica: ["Abyssinica SIL"],
+              noto: ["Noto Serif"],
+              pop: ["Poppins"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[url('img/c.jpg')] text-slate-700">
+    <!-- header -->
+
+    <nav>
+      <div id="navfix" class="text-white fixed bg-gradient-to-l from-hijauu to-green-700 z-10 h-[50px] shadow-md sm:shadow-white flex items-center justify-between px-8 w-full lg:h-[67px] md:h-16">
+        <div class="">
+          <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-jau to-slate-100 bg-clip-text font-pop"><a href="home.html"><i class="fas fa-wifi text-2xl text-transparent bg-gradient-to-r from-jau to-white bg-clip-text"></i>Arinis.<span class="font-pop text-[.8em]  font-semibold sm:text-xl">com</span></a></h1>
+        </div>
+
+        <!-- Hamburger-menu -->
+        <button id="hamburger" type="button" name="hamburger" class="w-5 h-7 sm:hidden">
+          <span class="hamburger-line origin-top-left transition duration-300"></span>
+          <span class="hamburger-line transition duration-50"></span>
+          <span class="hamburger-line origin-bottom-left transition duration-300"></span>
+        </button>
+
+        <!-- Hamburger-menu -->
+
+        <!-- nav menu -->
+
+        <div id="nav-menu" class="z-10 text-black sm:text-white shadow-md sm:shadow:none shadow-jau absolute w-72 lg:w-[500px] bg-white sm:bg-inherit py-6 shadow-md right-3 top-12 hidden sm:block sm:static sm:shadow-none md:w-[400px]">
+          <ul class="block sm:flex font-sinica">
+            <li class="pt-5 px-7 sm:pt-0"><a href="home.html" class="hover:text-green-300">Home</a></li>
+            <li class="pt-10 px-7 sm:pt-0"><a href="tentang-arinis.html" class="hover:text-green-300">About</a></li>
+            <li class="pt-10 px-7 sm:pt-0"><a href="visi.html" class="hover:text-green-300">Visi</a></li>
+            <li class="pt-10 pb-5 px-7 sm:pt-0 sm:pb-0"><a href="misi.html" class="hover:text-green-300">Misi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- nav menu -->
+    </nav>
+    <!-- header -->
+
+    <!-- section satu -->
+
+    <div class="absolute top-10 w-full h-36 sm:h-52 bg-cover bg-no-repeat" style="background-image: url('img/a.jpg')">
+      <div class="sm:bg-black sm:h-52 opacity-20 w-full h-44 min"></div>
+      <div class="flex items-center -mt-6 sm:-mt-0 px-3 sm:px-8 sm:py-2">
+      <p class="mr-5 text-green-700 text-base hover:text-black font-sinica font-bold"><a href="misi.html">Beranda</a></p>
+      <p class="text-base font-sinica text-slate-600 font-bold">Wireless</p>
+    </div>
+      <div class="container mx-auto -mt-2 flex items-center flex-wrap justify-around px-3">
+        
+        <div class="lg:max-w-[600px] flex flex-col justify-center items-center md:max-w-[400px]">
+          <h1 class="font-semibold pt-10 text-green-800">@Website Arinis.com</h1>
+          <h1 class="md:text-6xl text-4xl font-pop bg-gradient-to-r from-hijauu to-black bg-clip-text text-transparent text-center">Wireless Network</h1>
+
+          <img src="img/vz.png" class="rounded-xl flex items-center bg-transparent bg-clip-bg w-full xl:w-full xl:h-[30em] h-96 xl:mt-[-60px]" />
+
+          <p class="sm:-mt-10 -mt-10 py-2">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+            type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?
+            <p class="py-2">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like
+            </p>
+
+            <p class="py-2">
+
+            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+            </p>
+
+        </div>
+
+         <!-- section sidebar -->
+     
+         <div class="-mt-[0] rounded-2xl sm:-mr-5 sm:bg-slate-100 p-[1px] shadow-xl shadow-jau  sm:-mt-[0] xl:max-w-[400px] lg:max-w-[300px] bg-none md:max-w-[280px] h-0 sm:h-[1000px]  xl:z-[-89999999999999]">     
+          <img src="https://img.freepik.com/free-vector/cloud-network-system-background-vector-social-media-banner_53876-111844.jpg?w=740&t=st=1674362186~exp=1674362786~hmac=3f5a24691f22ac3ff3774f3189a1bd87e424bb926a5307bbb8939a939825ba84" class=" h-0 sm:h-full rounded-2xl mb-5" />
+          </div>
+
+         <!-- section sidebar -->
+
+      </div>
+
+      <!-- section satu -->
+
+      <!-- section dua -->
+
+      <div class="bg-gradient-to-r from-hijauu mt-7 to-green-800">
+      <h2 class="text-center text-4xl font-pop text-slate-100 bg-clip-text text-transparent pt-10 sm:pt-12">Kontak</h2>
+      <p class="text-center px-3 text-slate-100  text-base sm:text-md font-sinica">Hubungi nomor atau media sosial yang sudah ada dibawah dan telusuri google maps yang sudah tertera.</p>
+      <div class="mx-auto mt-10 flex flex-wrap">
+        <div class="w-full sm:max-w-[400px] xl:max-w-[650px]">
+        <h2 class="text-center text-2xl font-bold text-slate-100 font-arial py-7">Lokasi Maps</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6093364669987!2d99.03599011392141!3d3.196889853750858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30317ba226c0b8e9%3A0x71e874131928ef39!2sArinisNet-Com-Travel%20(ANCT)!5e0!3m2!1sid!2sid!4v1674037588818!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full mb-5 md:w-[20em] xl:w-[35em] h-80"></iframe>
+          </div>
+    
+      <div class="max-w-[30em] mx-auto justify-center flex flex-wrap flex-col">
+        <h2 class="text-center text-2xl font-bold text-slate-100 font-arial py-7">Kontak</h2>
+        <div class="flex items-center py-2">
+          <p class="mr-10 text-xl text-slate-100">Alamat</p>
+          <p class="text-slate-100 text-xl">ArinisNet-Com-Travel (ANCT)</p>
+        </div>
+        <div class="flex items-center py-2">
+          <p class="mr-[51px] text-xl text-slate-100">Email</p>
+          <p class="text-slate-100 text-xl">Syam@gmail.com</p>
+        </div>
+        <div class="flex items-center py-2">
+          <p class="mr-[49px] text-xl text-slate-100">Media<br>Sosial</p>
+          <a href =""><i class=" w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-whatsapp"></i></a>
+          <a href =""><i class=" w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-instagram"></i></a>
+          <a href =""><i class=" w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-facebook"></i></a>
+        </div>
+      </div>
+      </div>
+    </div>
+     
+
+    <!-- section dua -->
+
+    <!-- section akhir -->
+
+    <!-- footer -->
+    <footer>
+      <div class="mt-[-5px] pt-20 bg-gradient-to-r from-hijauu -mt-2 to-green-800 flex-col py-10 h-16 flex items-center justify-center w-full">
+         <h1 class="text-[1.4em] font-semibold text-transparent bg-gradient-to-r from-jau to-slate-100 bg-clip-text font-pop"><a href="home.html"><i class="fas fa-wifi text-2xl text-transparent bg-gradient-to-r from-jau to-white bg-clip-text"></i>Arinis.<span class="font-pop font-semibold text-xl">com</span></a></h1>
+        <p class="text-center text-sm font-sinica mt-2 text-slate-100">&copy;2023 - Arinis.com // All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- section akhir -->
+
+    
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>

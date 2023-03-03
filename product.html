@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        body {
+          font-family: sinica;
+          font-size: 1.2em;
+        }
+
+        .hamburger-line {
+          @apply w-[15px] h-[2.3px] my-[3px] bg-white block rounded-full;
+        }
+
+        .hamburger-active > span:nth-child(1) {
+          @apply rotate-45;
+        }
+        .hamburger-active > span:nth-child(2) {
+          @apply scale-0;
+        }
+        .hamburger-active > span:nth-child(3) {
+          @apply -rotate-45;
+        }
+
+        .after {
+          @apply break-after-page z-[999999] bg-blue-700 shadow-xl w-full min-h-screen;
+        }
+
+        .grup {
+          @apply hover: text-blue-500;
+        }
+
+        .fix {
+          @apply fixed z-10 w-full bg-white;
+        }
+      }
+    </style>
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Acme&family=Noto+Serif:wght@700&family=Open+Sans:wght@700&family=Overpass&family=Poppins:wght@900&family=Unbounded:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style1.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#F273E6",
+              hijauu: "#674188",
+              jau: "#D9ACF5",
+              pin: "#645CBB",
+              pinb: "#FF8B13",
+            },
+            fontFamily: {
+              sinica: ["Abyssinica SIL"],
+              noto: ["Noto Serif"],
+              pop: ["Poppins"],
+              acme: ["Acme"]
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  </head>
+  <body class="text-slate-700">
+    <!-- header -->
+
+    <nav>
+      <div id="navfix" class="text-white fixed bg-gradient-to-l from-jau to-pin z-40 h-[50px] shadow-md sm:shadow-white flex items-center justify-between px-8 w-full lg:h-[67px] md:h-16">
+        <div class="flex justify-center">
+          <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+          <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-clifford to-white bg-clip-text font-pop">
+            <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+          </h1>
+        </div>
+
+        <!-- Hamburger-menu -->
+        <button id="hamburger" type="button" name="hamburger" class="w-5 h-7 sm:hidden">
+          <span class="hamburger-line origin-top-left transition duration-300"></span>
+          <span class="hamburger-line transition duration-50"></span>
+          <span class="hamburger-line origin-bottom-left transition duration-300"></span>
+        </button>
+
+        <!-- Hamburger-menu -->
+
+        <!-- nav menu -->
+
+        <div id="nav-menu" class="z-10 text-black sm:text-white shadow-md sm:shadow:none shadow-hijauu absolute w-72 lg:w-[600px] bg-white sm:bg-inherit py-6 shadow-md right-3 top-12 hidden rounded-xl sm:rounded-none sm:block sm:static sm:shadow-none md:w-[510px]">
+          <ul class="block sm:flex font-sinica text-lg">
+            <li class="pt-5 px-7 sm:pt-0"><a href="home.html" class="hover:text-hijauu">Home</a></li>
+            <li class="pt-12 px-7 sm:pt-0"><a href="tentang-arinis.html" class="hover:text-hijauu">About</a></li>
+            <li class="pt-12 px-7 sm:pt-0"><a href="service.html" class="hover:text-hijauu">Service</a></li>
+            <li class="pt-12 px-7 sm:pt-0"><a href="Contact.html" class="hover:text-hijauu">Contact</a></li>
+            <li class="pt-12 pb-5 px-7 sm:pt-0 sm:pb-0"><a href="product.html" class="hover:text-hijauu">Product</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- nav menu -->
+    </nav>
+    <!-- header -->
+
+    <!-- section satu -->
+
+    <div class="bg-[url('img/tas11.jpg')] min-h-screen bg-cover bg-center sm:px-0">
+      <ul class="sm:ml-10 ml-5 flex sm:pt-20 pt-14">
+        <a href="service.html"><li class="text-base sm:text-lg mr-2 hover:text-pink-700 text-pink-400 font-acme">Service</li></a>
+        <li class="text-base mr-2 text-pink-400 font-acme">></li>
+        <a href="contact.html"><li class="text-base sm:text-lg hover:text-pink-700 text-pink-400 font-acme">Contact</li></a>
+      </ul>
+      <div class="lg:max-w-[600px] md:max-w-[600px] container xl:w-[29em] px-3 xl:px-3 sm:translate-x-16 sm:pt-16 lg:pt-16 pt-[10px] sm:order-2 z-10">
+        <h1 class="font-semibold pt-6 font-open text-center text-pink-700">@Belanja online Shop</h1>
+        <h1 class="md:text-6xl text-4xl font-pop text-white bg-clip-text text-transparent text-center"><span class="text-pink-600">Belanja </span>produk tas berkualitas di <span class="text-pink-600"> Arinis.com </span></h1>
+        <p class="mt-3 font-sinica text-base text-white">
+          Belanja barang yang berkualitas apalagi dengan harga yang terjangkau tentunya sangat banyak diminati oleh setiap orang. Toko arinis.com toko yang tepat untuk mencari produk tas terbaik.
+        </p>
+      </div>
+    </div>
+
+    <!-- section satu -->
+
+    <!-- section dua -->
+
+    <div class="container mx-auto text-center py-5">
+      <div class="text-center w-full">
+        <div class="flex justify-center">
+          <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+          <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-pink-600 to-pink-900 bg-clip-text font-pop">
+            <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+          </h1>
+        </div>
+        <h2 class="text-center font-pop text-[1.5em] md:text-[1.7em] text-pink-600">Produk Premium</h2>
+      </div>
+      <div class="flex flex-wrap justify-around items-center mx-auto -mt-10 sm:mt-10">
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas1.jpg" class="w-[100%] h-80 mt-5 sm:w-64 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica -mt-7 text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas2.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas3.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[400px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas8.jpg" class="w-[100%] h-64 mt-5 sm:w-64 sm:h-48 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica mt-3 sm:mt-9 text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas7.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas5.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section dua -->
+
+    <!-- section tiga -->
+
+    <div class="bg-[url('img/pink.jpg')] sm:h-[600px] w-full h-[750px] bg-cover bg-center justify-evenly flex items-center mx-auto flex-wrap">
+      <div class="xl:max-w-[550px] sm:max-w-[330px] order-2 sm:order-1 sm:mt-0 -mt-15 flex flex-col">
+        <span class="">
+          <img src="img/jam.png" class="w-full h-full rotate-90" />
+        </span>
+        <div class="text-2xl font-sinica text-center mt-14 text-white sm:hidden">
+          <p class="">Rolex</p>
+          <div class="text-[15px] sm:text-[11px] text-yellow-100">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="xl:max-w-[700px] sm:max-w-[420px] order-1 sm:order-2 text-center">
+        <h1 class="font-semibold pt-6 font-open text-center text-pink-700">@Belanja online Shop</h1>
+        <h1 class="md:text-6xl text-4xl font-pop text-white bg-clip-text text-transparent text-center"><span class="text-pink-600">Produk jam </span>berkualitas di <span class="text-pink-600"> Arinis.com </span></h1>
+        <p class="mt-3 font-sinica text-base text-white">Jam yang berkualitas harga terjangkau.</p>
+      </div>
+    </div>
+    <!-- section tiga -->
+
+    <!-- section empat -->
+
+    <div class="text-center w-full mt-10">
+      <div class="flex justify-center">
+        <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+        <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-pink-600 to-pink-900 bg-clip-text font-pop">
+          <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+        </h1>
+      </div>
+      <h2 class="text-center font-pop text-[1.5em] px-3 md:text-[1.7em] text-pink-600">Produk Tas Louis Vuitton dan Gucci</h2>
+    </div>
+
+    <h2 class="text-lg p-2 shadow-md shadow-clifford rounded-xl font-sinica w-52 bg-pink-500 mx-auto text-white text-center font-bold mt-10">Produk Louis Vuitton</h2>
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas1.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas2.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section empat -->
+
+     <!-- section lima -->
+
+     <h2 class="text-lg p-2 shadow-md shadow-clifford rounded-xl font-sinica w-52 bg-pink-500 mx-auto text-white text-center font-bold mt-10">Produk Louis Vuitton</h2>
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas1.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas2.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section lima -->
+
+     <!-- section enam -->
+
+     <h2 class="text-lg p-2 shadow-md shadow-clifford rounded-xl font-sinica w-52 bg-pink-500 mx-auto text-white text-center font-bold mt-10">Produk Louis Vuitton</h2>
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas1.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas2.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section enam -->
+
+     <!-- section tujuh -->
+     
+     <h2 class="text-lg p-2 shadow-md shadow-clifford rounded-xl font-sinica w-52 bg-pink-500 mx-auto text-white text-center font-bold mt-10">Produk Gucci</h2>
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas1.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas2.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section tujuh -->
+
+     <!-- section delapan -->
+
+     <h2 class="text-lg p-2 shadow-md shadow-clifford rounded-xl font-sinica w-52 bg-pink-500 mx-auto text-white text-center font-bold mt-10">Produk Gucci</h2>
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas1.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas2.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section delapan -->
+
+      <!-- section sembilan -->
+
+      <div class="bg-[url('img/aaa.jpg')] sm:h-[600px] w-full h-[750px] bg-cover bg-center justify-evenly flex items-center mx-auto flex-wrap">  
+        <div class="xl:max-w-[600px] sm:max-w-[420px] text-center sm:order-2">
+          <h1 class="font-semibold pt-6 font-open text-center text-pink-700">@Belanja online Shop</h1>
+          <h1 class="md:text-6xl text-4xl font-pop text-white bg-clip-text text-transparent text-center"><span class="text-pink-600">Mainan </span>beraneka  ragam di <span class="text-pink-600"> Arinis.com </span></h1>
+        </div>
+
+        <div class="xl:max-w-[1000px] sm:order-1 sm:max-w-[300px] max-w-[500px] order-2 sm:order-1 sm:mt-0 -mt-32 flex flex-col">
+          <span class="">
+            <img src="img/mainan.png" class="xl:max-w-[500px] sm:px-0 px-5 xl:max-h-[500px] w-[700px] sm:w-[500px] sm:h-[400px] xl:max-h-[650px] h-[250px]" />
+          </span>
+          <div class="text-2xl font-sinica text-center mt-10 text-white sm:hidden">
+            <p class="">Mainan anak-anak</p>
+            <div class="text-[15px] sm:text-[11px] text-yellow-100">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      <!-- section sembilan -->
+
+      <!-- section sepuluh -->
+
+    <div class="text-center w-full mt-10">
+      <div class="flex justify-center">
+        <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+        <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-pink-600 to-pink-900 bg-clip-text font-pop">
+          <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+        </h1>
+      </div>
+      <h2 class="text-center font-pop text-[1.5em] md:text-[1.7em] text-pink-600">Mainan anak anak</h2>
+    </div>
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/toy1.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/toy2.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/toy3.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/toy4.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section sepuluh -->
+
+
+
+      <!-- section  sebelas-->
+
+      <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+        <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+          <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+            <span class="">
+              <img src="img/toy5.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+            </span>
+            <div class="text-xl font-sinica text-slate-500">
+              <p class="">Sling bag</p>
+              <p class="">Rp.125.000</p>
+              <div class="text-[13px] sm:text-[11px] text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+            <span class="">
+              <img src="img/toy6.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+            </span>
+            <div class="text-xl font-sinica text-slate-500">
+              <p class="">Sling bag</p>
+              <p class="">Rp.125.000</p>
+              <div class="text-[13px] sm:text-[11px] text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+            <span class="">
+              <img src="img/toy7.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+            </span>
+            <div class="text-xl font-sinica text-slate-500">
+              <p class="">Sling bag</p>
+              <p class="">Rp.125.000</p>
+              <div class="text-[13px] sm:text-[11px] text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+            <span class="">
+              <img src="img/toy8.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+            </span>
+            <div class="text-xl font-sinica text-slate-500">
+              <p class="">Sling bag</p>
+              <p class="">Rp.125.000</p>
+              <div class="text-[13px] sm:text-[11px] text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="relative flex justify-center items-center ">
+          <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+          <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      </div>
+      
+
+      <!-- section sebelas  -->
+
+      <!-- section dua belas-->
+
+    <div class="bg-[url('img/produk0.jpg')] sm:h-[600px] w-full h-[750px] bg-cover bg-center justify-evenly flex items-center mx-auto flex-wrap">
+      <div class="xl:max-w-[550px] sm:max-w-[330px] order-2 sm:order-1 sm:mt-0 -mt-15 flex flex-col">
+        <span class="">
+          <img src="img/ranselone.png" class="w-full h-full" />
+        </span>
+        <div class="text-2xl font-sinica text-center mt-14 text-white sm:hidden">
+          <p class="">Ransel</p>
+          <div class="text-[15px] sm:text-[11px] text-yellow-100">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="xl:max-w-[700px] sm:max-w-[420px] order-1 sm:order-2 text-center">
+        <h1 class="font-semibold pt-6 font-open text-center text-pink-700">@Belanja online Shop</h1>
+        <h1 class="md:text-6xl text-4xl font-pop text-white bg-clip-text text-transparent text-center"><span class="text-pink-600">Produk ransel </span>berkualitas di <span class="text-pink-600"> Arinis.com </span></h1>
+        <p class="mt-3 font-sinica text-base text-white">Ransel sekolah SD, SMP, SMA/SMK yang berkualitas harga terjangkau.</p>
+      </div>
+    </div>
+
+    <!-- section dua belas-->
+
+      <!-- section tiga belas -->
+
+    <div class="text-center w-full mt-10">
+      <div class="flex justify-center">
+        <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+        <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-pink-600 to-pink-900 bg-clip-text font-pop">
+          <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+        </h1>
+      </div>
+      <h2 class="text-center font-pop text-[1.5em] px-3 md:text-[1.7em] text-pink-600">Produk ransel untuk sekolah</h2>
+    </div>
+
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel1.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel3.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section tiga belas -->
+
+    
+
+    <!-- section empat belas -->
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel5.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel7.jpg" class="sm:w-[100%] w-[90%] h-[400px] sm:w-64 -mt-12 sm:h-80 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica sm:-mt-5 -mt-10 text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel8.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section empat belas -->
+
+    <!-- section lima belas-->
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel13.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel14.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel15.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section lima belas-->
+
+
+    <!-- section enam belas-->
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel9.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel10.jpg" class="w-[100%] h-96 sm:w-64 -mt-10 sm:h-72 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica -mt-8 sm:-mt-0 text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel11.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/ransel12.png" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn font-a bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section enam belas-->
+
+    <!-- section tujuh belas-->
+
+      <div class="bg-[url('img/background.jpg')] sm:h-[600px] w-full h-[750px] bg-cover bg-center justify-evenly flex items-center mx-auto flex-wrap">  
+        <div class="xl:max-w-[600px] sm:max-w-[420px] text-center sm:order-2">
+          <h1 class="font-semibold pt-6 font-open text-center text-pink-700">@Belanja online Shop</h1>
+          <h1 class="md:text-6xl text-4xl font-pop text-white bg-clip-text text-transparent text-center"><span class="text-pink-600 px-3 sm:px-0">Tas selempang </span>untuk remaja di <span class="text-pink-600"> Arinis.com </span></h1>
+        </div>
+
+        <div class="xl:max-w-[1000px] sm:order-1 sm:max-w-[300px] max-w-[500px] order-2 sm:order-1 sm:mt-0 -mt-32 flex flex-col">
+          <span class="">
+            <img src="img/tas-selempang.png" class="xl:max-w-[500px] sm:px-0 px-5 xl:max-h-[500px] w-[700px] sm:w-[500px] sm:h-[400px] xl:max-h-[650px] h-[250px]" />
+          </span>
+          <div class="text-2xl font-sinica text-center mt-10 text-white sm:hidden">
+            <p class="">Tas selempang</p>
+            <div class="text-[15px] sm:text-[11px] text-yellow-100">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section tujuh belas -->
+
+      <!-- section delapan belas -->
+
+    <div class="text-center w-full mt-10">
+      <div class="flex justify-center">
+        <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+        <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-pink-600 to-pink-900 bg-clip-text font-pop">
+          <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+        </h1>
+      </div>
+      <h2 class="text-center font-pop text-[1.5em] px-3 md:text-[1.7em] text-pink-600">Produk selempang remaja</h2>
+    </div>
+
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang1.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang2.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang4.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang5.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section delapan belas -->
+
+    <!-- section sembilan belas -->
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang6.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang7.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang8.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/tas-selempang9.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Sling bag</p>
+            <p class="">Rp.125.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section sembilan belas -->
+
+    <!-- section dua puluh -->
+
+    <div class="bg-[url('img/background2.jpg')] sm:h-[600px] w-full h-[750px] bg-cover bg-center justify-evenly flex items-center mx-auto flex-wrap">
+      <div class="xl:max-w-[550px] sm:max-w-[330px] order-2 sm:order-1 sm:-mt-0 -mt-32 flex flex-col">
+        <span class="">
+          <img src="img/sa.png" class="w-full sm:h-[350px] h-[300px]" />
+        </span>
+        <div class="text-2xl font-sinica text-center text-white sm:hidden">
+          <p class="">ATK sekolah</p>
+          <div class="text-[15px] sm:text-[11px] text-yellow-100">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="xl:max-w-[700px] sm:max-w-[420px] order-1 sm:order-2 text-center">
+        <h1 class="font-semibold pt-6 font-open text-center text-pink-700">@Belanja online Shop</h1>
+        <h1 class="md:text-6xl text-4xl font-pop text-white bg-clip-text text-transparent text-center"><span class="text-pink-600">Peralatan </span> ATK sekolah SD, SMP,<span class="text-pink-600"> dan SMA/SMK </span></h1>
+        <p class="mt-3 font-sinica text-base text-white"></p>
+      </div>
+    </div>
+    <!-- section dua puluh -->
+
+    <!-- section dua puluh satu -->
+
+    <div class="text-center w-full mt-10">
+      <div class="flex justify-center">
+        <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+        <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-pink-600 to-pink-900 bg-clip-text font-pop">
+          <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+        </h1>
+      </div>
+      <h2 class="text-center font-pop text-[1.5em] px-3 md:text-[1.7em] text-pink-600">perlengkapan sekolah</h2>
+    </div>
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/buku.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Buku</p>
+            <p class="">Rp3.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/buku-gambar.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Buku Gambar</p>
+            <p class="">Rp3.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/kertas.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Kertas warna</p>
+            <p class="">Rp1.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/penggaris.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Penggaris</p>
+            <p class="">Rp3.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section dua puluh satu -->
+
+    <!-- section dua puluh dua -->
+
+    <div class="container mx-auto -mt-5 z-20 swiper mySwiper flex flex-col justify-around mx-auto text-center">
+      <div class="swiper-wrapper flex sm:justify-center sm:mx-5 sm:py-10">
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/pensil.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Pensil</p>
+            <p class="">Rp3.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/pulpen.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Pulpen Kenko</p>
+            <p class="">Rp5.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/step.jpg" class="w-[100%] h-80 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">penghapus</p>
+            <p class="">Rp2.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide sm:w-72 mt-8 w-80 sm:h-[350px] h-[430px] rounded-xl py-2 shadow-lg border border-slate-50 overflow-hidden">
+          <span class="">
+            <img src="img/stipo.jpg" class="w-[100%] h-80 ml-9 sm:w-64 -mt-2 sm:h-64 mx-auto" />
+          </span>
+          <div class="text-xl font-sinica text-slate-500">
+            <p class="">Stipo kenko</p>
+            <p class="">Rp5.000</p>
+            <div class="text-[13px] sm:text-[11px] text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center ">
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn bg-clifford w-3 rounded-full -mt-[520px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
+    <!-- section dua puluh dua -->
+
+    
+  
+
+    <!-- section tujuh -->
+
+    <div class="bg-gradient-to-r from-hijauu to-green-800">
+      <h2 class="text-center text-4xl font-pop text-slate-100 pt-10 sm:pt-12">Kontak</h2>
+      <p class="text-center px-3 text-slate-100 text-base sm:text-md font-sinica">Hubungi nomor atau media sosial yang sudah ada dibawah dan telusuri google maps yang sudah tertera.</p>
+      <div class="mx-auto mt-10 flex flex-wrap">
+        <div class="w-full sm:max-w-[400px] xl:max-w-[650px]">
+          <h2 class="text-center text-2xl font-bold text-slate-100 font-arial py-7">Lokasi Maps</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6093364669987!2d99.03599011392141!3d3.196889853750858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30317ba226c0b8e9%3A0x71e874131928ef39!2sArinisNet-Com-Travel%20(ANCT)!5e0!3m2!1sid!2sid!4v1674037588818!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full mb-5 md:w-[20em] xl:w-[35em] h-80"
+          ></iframe>
+        </div>
+
+        <div class="max-w-[30em] mx-auto justify-center flex flex-wrap flex-col">
+          <h2 class="text-center text-2xl font-bold text-slate-100 font-arial py-7">Kontak</h2>
+          <div class="flex items-center py-2">
+            <p class="mr-10 text-xl text-slate-100">Alamat</p>
+            <p class="text-slate-100 text-xl">ArinisNet-Com-Travel (ANCT)</p>
+          </div>
+          <div class="flex items-center py-2">
+            <p class="mr-[51px] text-xl text-slate-100">Email</p>
+            <p class="text-slate-100 text-xl">Syam@gmail.com</p>
+          </div>
+          <div class="flex items-center py-2">
+            <p class="mr-[46px] text-xl text-slate-100">No Hp</p>
+            <p class="text-slate-100 text-xl">089223270791</p>
+          </div>
+
+          <div class="flex items-center py-2">
+            <p class="mr-[49px] text-xl text-slate-100">Media<br />Sosial</p>
+            <a href=""><i class="w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-whatsapp"></i></a>
+            <a href=""><i class="w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-instagram"></i></a>
+            <a href=""><i class="w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section tujuh -->
+
+    <!-- section akhir -->
+
+    <!-- footer -->
+    <footer>
+      <div class="mt-[-5px] pt-20 bg-gradient-to-r from-hijauu -mt-2 to-green-800 flex-col py-10 h-16 flex items-center justify-center w-full">
+        <div class="flex justify-center">
+          <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+          <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-clifford to-white bg-clip-text font-pop">
+            <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+          </h1>
+        </div>
+
+        <p class="text-center text-sm font-sinica mt-2 text-slate-100">&copy;2023 - Arinis.com // All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- section akhir -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

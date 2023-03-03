@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        body {
+          font-family: sinica;
+          font-size: 1.2em;
+        }
+
+        .hamburger-line {
+          @apply w-[15px] h-[2.3px] my-[3px] bg-white block rounded-full;
+        }
+
+        .hamburger-active > span:nth-child(1) {
+          @apply rotate-45;
+        }
+        .hamburger-active > span:nth-child(2) {
+          @apply scale-0;
+        }
+        .hamburger-active > span:nth-child(3) {
+          @apply -rotate-45;
+        }
+
+        .after {
+          @apply break-after-page z-[999999] bg-blue-700 shadow-xl w-full min-h-screen;
+        }
+
+        .grup {
+          @apply hover: text-blue-500;
+        }
+
+        .fix {
+          @apply fixed z-10 w-full bg-white;
+        }
+      }
+    </style>
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Acme&family=Noto+Serif:wght@700&family=Open+Sans:wght@700&family=Overpass&family=Poppins:wght@900&family=Unbounded:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style3.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#F273E6",
+              hijauu: "#674188",
+              jau: "#D9ACF5",
+              pin: "#645CBB",
+              pinb: "#FF8B13",
+            },
+            fontFamily: {
+              sinica: ["Abyssinica SIL"],
+              noto: ["Noto Serif"],
+              pop: ["Poppins"],
+              acme: ["Acme"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  </head>
+  <body class="bg-white text-slate-900">
+    <!-- header -->
+
+    <nav>
+      <div id="navfix" class="text-white fixed bg-gradient-to-l from-jau to-pin z-40 h-[50px] shadow-md sm:shadow-white flex items-center justify-between px-8 w-full lg:h-[67px] md:h-16">
+        <div class="flex justify-center">
+          <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+          <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-clifford to-white bg-clip-text font-pop">
+            <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+          </h1>
+        </div>
+
+        <!-- Hamburger-menu -->
+
+        <button id="hamburger" type="button" name="hamburger" class="w-5 h-7 sm:hidden">
+          <span class="hamburger-line origin-top-left transition duration-300"></span>
+          <span class="hamburger-line transition duration-50"></span>
+          <span class="hamburger-line origin-bottom-left transition duration-300"></span>
+        </button>
+
+        <!-- Hamburger-menu -->
+
+        <!-- nav menu -->
+
+        <div
+          id="nav-menu"
+          class="z-10 text-black sm:text-white shadow-md sm:shadow:none shadow-hijauu absolute w-72 lg:w-[600px] bg-white sm:bg-inherit py-6 shadow-md right-3 top-12 hidden rounded-xl sm:rounded-none sm:block sm:static sm:shadow-none md:w-[510px]"
+        >
+          <ul class="block sm:flex font-sinica text-lg">
+            <li class="pt-5 px-7 sm:pt-0"><a href="home.html" class="hover:text-hijauu">Home</a></li>
+            <li class="pt-12 px-7 sm:pt-0"><a href="tentang-arinis.html" class="hover:text-hijauu">About</a></li>
+            <li class="pt-12 px-7 sm:pt-0"><a href="service.html" class="hover:text-hijauu">Service</a></li>
+            <li class="pt-12 px-7 sm:pt-0"><a href="Contact.html" class="hover:text-hijauu">Contact</a></li>
+            <li class="pt-12 pb-5 px-7 sm:pt-0 sm:pb-0"><a href="product.html" class="hover:text-hijauu">Product</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- nav menu -->
+    </nav>
+    <!-- header -->
+
+    <!-- Section satu -->
+
+    <div class="">
+      <ul class="sm:ml-10 ml-5 flex sm:pt-20 pt-14">
+        <a href="product.html"><li class="text-base sm:text-lg mr-2 hover:text-pink-700 text-pink-400 font-acme">Product</li></a>
+        <li class="text-base mr-2 text-pink-400 font-acme">></li>
+        <a href="contact.html"><li class="text-base sm:text-lg hover:text-pink-700 text-pink-400 font-acme">Contact</li></a>
+      </ul>
+      <div class="flex justify-evenly flex-wrap mx-auto container sm:-mt-24 items-center">
+        <div class="sm:max-w-[300px] container px-3 sm:pt-36 lg:pt-16 xl:max-w-[500px]"> 
+          <h1 class="font-semibold pt-6 font-open text-center text-hijauu">@Print Arinis.com</h1>
+          <h1 class="md:text-6xl text-4xl font-pop text-pin bg-clip-text text-transparent text-center"><span class="text-clifford">Print segala document</h1>
+          <p class="mt-5 font-sinica text-base text-black">
+            Ngeprint segala document file PDF, WORD, EXEL, dan print gambar. Bisa juga membuat surat pembagian tanah, jual beli tanah, jangakauan sewa tanah dan surat lamaran kerja. 
+          </p>
+        </div>
+        <div class="xl:max-w-[550px] sm:max-w-[330px] sm:mt-20">
+          <img src="img/print.jpg" class="w-full h-full" />
+        </div>
+      </div>
+    </div>
+    <!-- Section satu -->
+
+    <!-- section dua -->
+
+      <div class="flex justify-center m-10 z-20">
+        <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+        <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-clifford to-hijauu bg-clip-text font-pop"><a href="home.html">Arinis.<span class="font-pop text-[.8em]  font-semibold sm:text-xl">com</span></a></h1>
+      </div>
+      <h2 class="text-[1.4em] sm:text-4xl px-3 py-10 -mt-20 font-noto text-slate-700 text-center z-20">IDR Print</h2>
+      <div class="container mx-auto z-20 m-10 -mt-10 sm:mt-10 py-3 swiper mySwiper">
+        <div class="swiper-wrapper flex sm:justify-center sm:mx-5 ">
+          <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] h-[350px] bg-slate-100 p-3">
+            <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">print pdf, word, dan exel</h2>
+            <img src="img/language.png" class="sm:w-28 sm:h-[100px] w-32 h-[123px] mt-4 sm:mt-2 mx-auto">
+            <div class="text-xl font-sinica text-center mt-5 text-slate-500">
+              <p class="">Perlembar : Rp2.000</p>
+              <p class=""></p>
+            </div>
+          </div>
+          <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] h-[350px] bg-slate-100 p-3">
+            <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">print Gambar</h2>
+            <img src="img/jpg.png" class="sm:w-28 sm:h-[100px] w-32 h-[123px] mt-4 sm:mt-2 mx-auto">
+            <div class="text-xl font-sinica text-center mt-5 text-slate-500">
+              <p class="">Perlembar : Rp3.000</p>
+              <p class="">Perlembar full warna : Rp5.000</p>
+              <p class=""></p>
+            </div>
+          </div>
+          
+          <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] h-[350px] bg-slate-100 p-3">
+            <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">Membuat surat perjanjian tanah dan lamaran kerja</h2>
+            <img src="img/surat.png" class="w-80 sm:h-[170px] h-[240px] -mt-7 mx-auto">
+            <div class="text-xl font-sinica text-center -mt-5 text-slate-500">
+              <p class="">Perlembar : Rp5.000</p>
+              <p class=""></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class=" flex justify-center items-center z-20">
+        <div class="swiper-navBtn sm:hidden bg-black w-4 flex justify-center items-center rounded-full font-acme -mt-[400px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+        <div class="swiper-navBtn sm:hidden bg-black w-4 flex justify-center items-center rounded-full font-acme -mt-[400px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+      </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      </div>
+<!-- section dua -->
+
+<!-- section tiga -->
+
+  <div class="flex justify-evenly flex-wrap mx-auto container items-center">
+  <div class="sm:max-w-[300px] container px-3 sm:pt-36 lg:pt-16  xl:max-w-[500px] sm:order-2"> 
+    <h1 class="font-semibold pt-6 font-open text-center text-hijauu">@Potocopy Arinis.com</h1>
+    <h1 class="md:text-6xl text-4xl font-pop text-pin bg-clip-text text-transparent text-center"><span class="text-clifford">Potocopy Document</h1>
+    <p class="mt-5 font-sinica text-base text-black">
+      Memotocopy KTP, Kartu Keluarga, Ijazah, Akte, dan document dan kertas lainnya. 
+    </p>
+  </div>
+  <div class="xl:max-w-[550px] sm:max-w-[330px] sm:mt-20 sm:order-1">
+    <img src="img/o.jpg" class="w-full h-full" />
+  </div>
+</div>
+
+<!-- section tiga -->
+
+<!-- section empat-->
+
+
+<div class="">
+  <div class="flex justify-center m-10 z-20">
+    <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+    <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-clifford to-hijauu bg-clip-text font-pop"><a href="home.html">Arinis.<span class="font-pop text-[.8em]  font-semibold sm:text-xl">com</span></a></h1>
+  </div>
+  <h2 class="text-[1.4em] sm:text-4xl px-3 py-10 -mt-20 font-noto text-slate-700 text-center z-20">IDR Poto Copy</h2>
+  <div class="container mx-auto z-20 m-10 -mt-10 sm:mt-10 py-3 swiper mySwiper">
+    <div class="swiper-wrapper flex sm:justify-center sm:mx-5 ">
+      <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] bg-slate-100 p-3">
+        <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">Non timbal balik</h2>
+        <img src="img/clipboard.png" class="sm:w-28 sm:h-[100px] w-32 h-[123px] mt-4 sm:mt-2 mx-auto">
+        <div class="text-xl font-sinica text-center mt-5 text-slate-500">
+          <p class="">Rp1.000 : 3 Lembar</p>
+          <p class=""></p>
+        </div>
+      </div>
+      <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] bg-slate-100 p-3">
+        <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">Timbal balik</h2>
+        <img src="img/clipboard.png" class="sm:w-28 sm:h-[100px] w-32 h-[123px] mt-4 sm:mt-2 mx-auto">
+        <div class="text-xl font-sinica text-center mt-5 text-slate-500">
+          <p class="">Rp1.000 : 2 Lembar</p>
+          <p class=""></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="relative flex justify-center items-center z-20">
+    <div class="swiper-navBtn sm:hidden bg-black w-4 flex justify-center items-center rounded-full font-acme -mt-[350px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+    <div class="swiper-navBtn sm:hidden bg-black w-4 flex justify-center items-center rounded-full font-acme -mt-[350px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<!-- section empat-->
+
+<!-- section lima -->
+
+<div class="flex justify-evenly flex-wrap mx-auto container items-center">
+  <div class="sm:max-w-[300px] container px-3 sm:pt-36 lg:pt-16 xl:max-w-[500px]"> 
+    <h1 class="font-semibold pt-6 font-open text-center text-hijauu">@Cetak undangan Arinis.com</h1>
+    <h1 class="md:text-6xl text-4xl font-pop text-pin bg-clip-text text-transparent text-center"><span class="text-clifford">Cetak undangan</h1>
+    <p class="mt-5 font-sinica text-base text-black">
+      Mencetak undangan untuk pernikahan, sunatan dan pesta lainnya.
+    </p>
+  </div>
+  <div class="xl:max-w-[550px] sm:max-w-[330px] sm:mt-20">
+    <img src="img/undangan.jpg" class="w-full h-full" />
+  </div>
+</div>
+
+<!-- section lima -->
+
+<!-- section enam -->
+
+<div class="">
+  <div class="flex justify-center mt-14 z-20">
+    <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+    <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-clifford to-hijauu bg-clip-text font-pop"><a href="home.html">Arinis.<span class="font-pop text-[.8em]  font-semibold sm:text-xl">com</span></a></h1>
+  </div>
+  <h2 class="text-[1.4em] sm:text-4xl px-3 py-10 -mt-10 font-noto text-slate-700 text-center z-20">IDR Cetak Undangan</h2>
+  <div class="container mx-auto z-20 py-3 swiper mySwiper">
+    <div class="swiper-wrapper flex sm:justify-center sm:mx-5 ">
+      <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] bg-slate-100 p-3">
+        <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">Kertas biasa</h2>
+        <img src="img/cetakpoto1.png" class="sm:w-52 sm:h-[150px] w-72 h-[170px] mt-4 sm:mt-2 mx-auto">
+        <div class="text-xl font-sinica text-center mt-5 text-slate-500">
+          <p class="">Perlembar : Rp1.000</p>
+          <p class=""></p>
+        </div>
+      </div>
+      <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] bg-slate-100 p-3">
+        <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">Kertas sedang</h2>
+        <img src="img/cetakpoto1.png" class="sm:w-52 sm:h-[150px] w-72 h-[170px] mt-4 sm:mt-2 mx-auto">
+        <div class="text-xl font-sinica text-center mt-5 text-slate-500">
+          <p class="">Perlembar : Rp1.500</p>
+          <p class=""></p>
+        </div>
+      </div>
+      <div class="swiper-slide sm:rounded-xl min overflow-hidden sm:h-[300px] bg-slate-100 p-3">
+        <h2 class="font-sinica text-xl pt-4 text-slate-900 text-center">Kertas kilat</h2>
+        <img src="img/cetakpoto1.png" class="sm:w-52 sm:h-[150px] w-72 h-[170px] mt-4 sm:mt-2 mx-auto">
+        <div class="text-xl font-sinica text-center mt-5 text-slate-500">
+          <p class="">Perlembar : Rp2.000</p>
+          <p class=""></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative flex justify-center items-center z-20">
+    <div class="swiper-navBtn sm:hidden bg-black w-4 flex justify-center items-center rounded-full font-acme -mt-[350px] text-white opacity-50  absolute  -rotate-180 left-0" id="btnPrev">></div>
+    <div class="swiper-navBtn sm:hidden bg-black w-4 flex justify-center items-center rounded-full font-acme -mt-[350px] text-white opacity-50 absolute  right-0" id="btnNext">></div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+</div>
+</div>
+
+<!-- section enam -->
+
+<!-- section tujuh -->
+
+<!-- section tujuh -->
+
+<!-- section delapan -->
+
+<!-- section delapan -->
+
+    <!-- section tujuh -->
+
+    <div class="bg-gradient-to-r from-hijauu to-green-800">
+      <h2 class="text-center text-4xl font-pop text-slate-100 pt-10 sm:pt-12">Kontak</h2>
+      <p class="text-center px-3 text-slate-100 text-base sm:text-md font-sinica">Hubungi nomor atau media sosial yang sudah ada dibawah dan telusuri google maps yang sudah tertera.</p>
+      <div class="mx-auto mt-10 flex flex-wrap">
+        <div class="w-full sm:max-w-[400px] xl:max-w-[650px]">
+          <h2 class="text-center text-2xl font-bold text-slate-100 font-arial py-7">Lokasi Maps</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6093364669987!2d99.03599011392141!3d3.196889853750858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30317ba226c0b8e9%3A0x71e874131928ef39!2sArinisNet-Com-Travel%20(ANCT)!5e0!3m2!1sid!2sid!4v1674037588818!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full mb-5 md:w-[20em] xl:w-[35em] h-80"
+          ></iframe>
+        </div>
+
+        <div class="max-w-[30em] mx-auto justify-center flex flex-wrap flex-col">
+          <h2 class="text-center text-2xl font-bold text-slate-100 font-arial py-7">Kontak</h2>
+          <div class="flex items-center py-2">
+            <p class="mr-10 text-xl text-slate-100">Alamat</p>
+            <p class="text-slate-100 text-xl">ArinisNet-Com-Travel (ANCT)</p>
+          </div>
+          <div class="flex items-center py-2">
+            <p class="mr-[51px] text-xl text-slate-100">Email</p>
+            <p class="text-slate-100 text-xl">Syam@gmail.com</p>
+          </div>
+          <div class="flex items-center py-2">
+            <p class="mr-[46px] text-xl text-slate-100">No Hp</p>
+            <p class="text-slate-100 text-xl">089223270791</p>
+          </div>
+
+          <div class="flex items-center py-2">
+            <p class="mr-[49px] text-xl text-slate-100">Media<br />Sosial</p>
+            <a href=""><i class="w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-whatsapp"></i></a>
+            <a href=""><i class="w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-instagram"></i></a>
+            <a href=""><i class="w-[38px] text-2xl h-[38px] text-slate-200 border border-slate-300 shadow-md rounded-full flex justify-center items-center hover:opacity-50 mr-3 fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section tujuh -->
+
+    <!-- section akhir -->
+
+    <!-- footer -->
+    <footer>
+      <div class="mt-[-5px] pt-20 bg-gradient-to-r from-hijauu -mt-2 to-green-800 flex-col py-10 h-16 flex items-center justify-center w-full">
+        <div class="flex justify-center">
+          <img src="img/s.png" class="sm:w-9 w-9 sm:h-8 h-7 rounded-full" />
+          <h1 class="sm:text-[1.4em] text-[1.2em] font-semibold text-transparent bg-gradient-to-r from-clifford to-white bg-clip-text font-pop">
+            <a href="home.html">Arinis.<span class="font-pop text-[.8em] font-semibold sm:text-xl">com</span></a>
+          </h1>
+        </div>
+
+        <p class="text-center text-sm font-sinica mt-2 text-slate-100">&copy;2023 - Arinis.com // All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- section akhir -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
